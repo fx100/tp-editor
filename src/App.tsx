@@ -4,7 +4,9 @@ import Router from './router'
 function App() {
   return (
     <>
-      <Link to="/">首页</Link> | <Link to="/about">关于</Link>
+      <nav>
+        <Link to="/">首页</Link> | <Link to="/about">关于</Link>
+      </nav>
       <Router />
     </>
   )
