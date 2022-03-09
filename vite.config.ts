@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import eslint from 'vite-plugin-eslint'
 import autoImport from 'unplugin-auto-import/vite'
 import imp from 'vite-plugin-imp'
+import antdDayjs from 'antd-dayjs-vite-plugin'
 
 export default defineConfig({
   plugins: [
@@ -20,5 +21,6 @@ export default defineConfig({
         },
       ],
     }),
+    antdDayjs(),
   ],
 })

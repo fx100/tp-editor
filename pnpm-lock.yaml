@@ -8,6 +8,8 @@ specifiers:
   '@typescript-eslint/parser': ^5.14.0
   '@vitejs/plugin-react': ^1.0.7
   antd: ^4.19.1
+  antd-dayjs-vite-plugin: ^1.1.4
+  dayjs: ^1.10.8
   eslint: ^8.10.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.0.0
@@ -25,6 +27,7 @@ specifiers:
 dependencies:
   '@ant-design/icons': 4.7.0_react-dom@17.0.2+react@17.0.2
   antd: 4.19.1_react-dom@17.0.2+react@17.0.2
+  dayjs: 1.10.8
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
@@ -36,6 +39,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.14.0_f4054b8c3cd621db16ae1b9d571bccc0
   '@typescript-eslint/parser': 5.14.0_eslint@8.10.0+typescript@4.6.2
   '@vitejs/plugin-react': 1.2.0
+  antd-dayjs-vite-plugin: 1.1.4_dayjs@1.10.8+vite@2.8.6
   eslint: 8.10.0
   eslint-config-prettier: 8.5.0_eslint@8.10.0
   eslint-plugin-prettier: 4.0.0_f3d13a703a9c1079e3d1af6044603beb
@@ -717,6 +721,25 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       color-convert: 2.0.1
+    dev: true
+
+  /antd-dayjs-vite-plugin/1.1.4_dayjs@1.10.8+vite@2.8.6:
+    resolution: {integrity: sha512-R3FSDAPixR11lyQ8o4fGzMPAI+q5lqibDM36eooE4/+QA4qjKIcNfKdRHL8QxEOG1xewoDjrfbz9f8gIyTWJXQ==}
+    peerDependencies:
+      vite: '>=2.0.0'
+    dependencies:
+      antd-dayjs-webpack-plugin: 1.0.6_dayjs@1.10.8
+      vite: 2.8.6
+    transitivePeerDependencies:
+      - dayjs
+    dev: true
+
+  /antd-dayjs-webpack-plugin/1.0.6_dayjs@1.10.8:
+    resolution: {integrity: sha512-UlK3BfA0iE2c5+Zz/Bd2iPAkT6cICtrKG4/swSik5MZweBHtgmu1aUQCHvICdiv39EAShdZy/edfP6mlkS/xXg==}
+    peerDependencies:
+      dayjs: '*'
+    dependencies:
+      dayjs: 1.10.8
     dev: true
 
   /antd/4.19.1_react-dom@17.0.2+react@17.0.2:
