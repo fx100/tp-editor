@@ -1,13 +1,13 @@
 import React from 'react'
-import './App.css'
+import { Link } from 'react-router-dom'
+import Router from './router'
 
 function App() {
-  const [count, setCount] = React.useState(0)
-
   return (
-    <button type="button" onClick={() => setCount((count) => count + 1)}>
-      count is: {count}
-    </button>
+    <>
+      <Link to="/">首页</Link> | <Link to="/about">关于</Link>
+      <Router />
+    </>
   )
 }
 
