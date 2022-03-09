@@ -17,10 +17,28 @@ export default defineConfig({
       libList: [
         {
           libName: 'antd',
-          style: (name) => `antd/es/${name}/style/css`,
+          libDirectory: 'es',
+          style: (name) => `antd/es/${name}/style`,
+        },
+        {
+          libName: '@formily/antd',
+          libDirectory: 'esm',
+          style: (name) => `@formily/antd/esm/${name}/style`,
         },
       ],
     }),
     antdDayjs(),
   ],
+  resolve: {
+    alias: {
+      '~antd': 'antd',
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      },
+    },
+  },
 })
