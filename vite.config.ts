@@ -1,3 +1,4 @@
+import * as path from 'path'
 import { defineConfig, UserConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import eslint from 'vite-plugin-eslint'
@@ -19,6 +20,7 @@ export default defineConfig(({ command }) => {
     resolve: {
       alias: {
         '~antd': 'antd',
+        '~': path.resolve(__dirname, 'src'),
       },
     },
     css: {
